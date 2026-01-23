@@ -99,42 +99,40 @@ export default function Home() {
   return (
     <main className="w-screen h-screen overflow-hidden bg-black flex flex-col">
       {/* Header Navigation */}
-      <nav className="flex items-center justify-center border mx-4 mt-4 max-md:w-[calc(100%-2rem)] max-md:justify-between border-slate-700 px-6 py-4 rounded-full text-white text-base font-semibold z-[400]">
-        <a href="#">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <nav className="flex items-center justify-center border mt-4 mx-auto max-md:mx-4 max-md:w-[calc(100%-2rem)] max-md:justify-between border-slate-700 px-4 py-3 rounded-full text-white text-sm font-semibold z-[400] w-fit">
+        <a href="#" className="mr-3">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4.706" cy="16" r="4.706" fill="#D9D9D9" />
             <circle cx="16.001" cy="4.706" r="4.706" fill="#D9D9D9" />
             <circle cx="16.001" cy="27.294" r="4.706" fill="#D9D9D9" />
             <circle cx="27.294" cy="16" r="4.706" fill="#D9D9D9" />
           </svg>
         </a>
-        <div className="hidden md:flex items-center gap-8 mx-auto">
-          <a href="https://www.linkedin.com/in/adnankhalil099/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-7 group">
+        <div className="hidden md:flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/adnankhalil099/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-6 group">
             <span className="block group-hover:-translate-y-full transition-transform duration-300">LinkedIn</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">LinkedIn</span>
           </a>
-          <a href="https://github.com/adnaan-2/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-7 group">
+          <a href="https://github.com/adnaan-2/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-6 group">
             <span className="block group-hover:-translate-y-full transition-transform duration-300">GitHub</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">GitHub</span>
           </a>
-          <a href="https://share.gameidea.org/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-7 group">
+          <a href="https://share.gameidea.org/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-6 group">
             <span className="block group-hover:-translate-y-full transition-transform duration-300">Project 1</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Project 1</span>
           </a>
-          <a href="https://interview-prep-ten-rose.vercel.app/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-7 group">
+          <a href="https://interview-prep-ten-rose.vercel.app/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-6 group">
             <span className="block group-hover:-translate-y-full transition-transform duration-300">Project 2</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Project 2</span>
           </a>
-          <a href="https://www.osaidtraveltours.com/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-7 group">
+          <a href="https://www.osaidtraveltours.com/" target="_blank" rel="noopener noreferrer" className="relative overflow-hidden h-6 group">
             <span className="block group-hover:-translate-y-full transition-transform duration-300">Project 3</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Project 3</span>
           </a>
-        </div>
-        <div className="hidden md:flex items-center gap-4">
-          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="border border-slate-600 hover:bg-slate-800 px-3 py-1.5 rounded-full text-xs font-medium transition ml-2">
             Contact
           </a>
-          <a href="YOUR_CV_LINK" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
+          <a href="YOUR_CV_LINK" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-3 py-1.5 rounded-full text-xs font-medium hover:bg-slate-100 transition duration-300">
             Download CV
           </a>
         </div>
