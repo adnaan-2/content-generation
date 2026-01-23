@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <main className="w-screen h-screen overflow-hidden bg-black flex flex-col">
       {/* Header Navigation */}
-      <nav className="flex items-center justify-center border mt-4 mx-auto max-md:mx-4 max-md:w-[calc(100%-2rem)] max-md:justify-between border-slate-700 px-4 py-3 rounded-full text-white text-sm font-semibold z-[400] w-fit">
+      <nav className="flex items-center justify-center border mt-3 sm:mt-4 mx-3 sm:mx-4 md:mx-auto w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] md:w-fit justify-between md:justify-center border-slate-700 px-3 sm:px-4 py-2 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold z-[400]">
         <a href="#" className="mr-3">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4.706" cy="16" r="4.706" fill="#D9D9D9" />
@@ -129,10 +129,10 @@ export default function Home() {
             <span className="block group-hover:-translate-y-full transition-transform duration-300">Project 3</span>
             <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Project 3</span>
           </a>
-          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="border border-slate-600 hover:bg-slate-800 px-3 py-1.5 rounded-full text-xs font-medium transition ml-2">
+          <a href="mailto:adnanmughal0342@gmail.com" className="border border-slate-600 hover:bg-slate-800 px-3 py-1.5 rounded-full text-xs font-medium transition ml-2">
             Contact
           </a>
-          <a href="YOUR_CV_LINK" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-3 py-1.5 rounded-full text-xs font-medium hover:bg-slate-100 transition duration-300">
+          <a href="https://drive.google.com/file/d/1HXWWcO38OwTMrTcUoNYNY-tzRsVS0G3v/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-3 py-1.5 rounded-full text-xs font-medium hover:bg-slate-100 transition duration-300">
             Download CV
           </a>
         </div>
@@ -145,16 +145,16 @@ export default function Home() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 bg-black/95 w-full flex flex-col items-center gap-4 py-6 z-[400] border-b border-slate-700">
+        <div className="md:hidden absolute top-14 sm:top-16 left-0 bg-black/95 w-full flex flex-col items-center gap-3 sm:gap-4 py-4 sm:py-6 z-[400] border-b border-slate-700 text-sm">
           <a className="hover:text-indigo-400 transition-colors" href="https://www.linkedin.com/in/adnankhalil099/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a className="hover:text-indigo-400 transition-colors" href="https://github.com/adnaan-2/" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a className="hover:text-indigo-400 transition-colors" href="https://share.gameidea.org/" target="_blank" rel="noopener noreferrer">Project 1</a>
           <a className="hover:text-indigo-400 transition-colors" href="https://interview-prep-ten-rose.vercel.app/" target="_blank" rel="noopener noreferrer">Project 2</a>
           <a className="hover:text-indigo-400 transition-colors" href="https://www.osaidtraveltours.com/" target="_blank" rel="noopener noreferrer">Project 3</a>
-          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
+          <a href="mailto:adnanmughal0342@gmail.com" className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
             Contact
           </a>
-          <a href="YOUR_CV_LINK" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
+          <a href="https://drive.google.com/file/d/1HXWWcO38OwTMrTcUoNYNY-tzRsVS0G3v/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
             Download CV
           </a>
         </div>
@@ -162,11 +162,11 @@ export default function Home() {
 
       {/* Title Section - Only show when no content generated */}
       {!hasGeneratedContent && (
-        <div className="text-center pt-4 sm:pt-6 md:pt-8 pb-3 sm:pb-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white px-4">
+        <div className="text-center pt-3 xs:pt-4 sm:pt-6 md:pt-8 pb-2 sm:pb-3 md:pb-4">
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white px-3 sm:px-4 leading-tight">
             Your ultimate creative
           </h1>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent px-4">
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent px-3 sm:px-4 leading-tight">
             companion - Creativ
           </h1>
         </div>
@@ -362,7 +362,7 @@ export default function Home() {
 
       {/* Static Images Gallery - Only show when no content generated */}
       {!hasGeneratedContent && (
-        <div className="relative h-[42vh] sm:h-[46vh] md:h-[50vh] lg:h-[54vh] xl:h-[58vh] mt-8 sm:mt-12 pb-2 sm:pb-3 md:pb-4 flex items-end justify-center overflow-visible">
+        <div className="relative h-[32vh] xs:h-[36vh] sm:h-[42vh] md:h-[48vh] lg:h-[54vh] xl:h-[58vh] mt-4 xs:mt-6 sm:mt-8 md:mt-10 pb-2 sm:pb-3 md:pb-4 flex items-end justify-center overflow-visible">
           <div
             className="relative h-full w-full flex items-end justify-center"
             style={{ transformStyle: 'flat' }}
@@ -373,21 +373,30 @@ export default function Home() {
               const diff = index - centerIndex;
               const distanceFromCenter = Math.abs(diff);
 
-              // Base size with 5% step decrease away from center
-              const baseVw = 16; // reduced by 20% from 20
-              const scalePercent = Math.max(70, 100 - 5 * distanceFromCenter); // 100%, 95%, 90%, 85%, 80%, 75%, 70%
-              const sizeVw = (baseVw * scalePercent) / 100;
-              const widthSize = `clamp(${96 * scalePercent / 100}px, ${sizeVw}vw, ${260 * scalePercent / 100}px)`;
-              const heightSize = `clamp(${120 * scalePercent / 100}px, ${sizeVw * 1.25}vw, ${320 * scalePercent / 100}px)`;
+              // Base size with 5% step decrease away from center - responsive sizing
+              // Mobile: 12vw base, Tablet: 14vw, Desktop: 16vw
+              const scalePercent = Math.max(70, 100 - 5 * distanceFromCenter);
+              
+              // Responsive width: smaller on mobile, larger on desktop
+              const minWidth = 56 * scalePercent / 100; // Mobile minimum
+              const maxWidth = 260 * scalePercent / 100; // Desktop maximum
+              const vwWidth = 14 * scalePercent / 100; // Viewport width percentage
+              const widthSize = `clamp(${minWidth}px, ${vwWidth}vw, ${maxWidth}px)`;
+              
+              // Height with 1.25 aspect ratio
+              const minHeight = 70 * scalePercent / 100;
+              const maxHeight = 320 * scalePercent / 100;
+              const vwHeight = vwWidth * 1.25;
+              const heightSize = `clamp(${minHeight}px, ${vwHeight}vw, ${maxHeight}px)`;
 
-              // Overlap horizontally and stack by z-index (center on top)
-              const offset = `calc(${diff} * clamp(70px, 8.5vw, 130px))`;
+              // Overlap horizontally - responsive offset (smaller on mobile)
+              const offset = `calc(${diff} * clamp(32px, 7vw, 130px))`;
               const zIndex = 100 - distanceFromCenter;
 
               return (
                 <div
                   key={index}
-                  className={"rounded-xl sm:rounded-2xl overflow-hidden absolute cursor-pointer transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-white/30 hover:ring-4 hover:ring-white/60 hover:brightness-110"}
+                  className={"rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden absolute cursor-pointer transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-white/30 hover:ring-2 sm:hover:ring-4 hover:ring-white/60 hover:brightness-110"}
                   style={{
                     width: widthSize,
                     height: heightSize,
@@ -403,13 +412,10 @@ export default function Home() {
                   <img
                     src={img}
                     alt={`Sample ${index + 1}`}
-                    className="w-full h-full object-cover rounded-lg sm:rounded-xl bg-gray-900"
+                    className="w-full h-full object-cover rounded-md sm:rounded-lg md:rounded-xl bg-gray-900"
                     loading="lazy"
                     onError={(e) => {
-                      // Fallback to a simple gray square using SVG data URI
-                      // This will show if the image file is missing
                       const target = e.target as HTMLImageElement;
-                      // Only set fallback once to avoid infinite loop
                       if (!target.src.includes('data:image/svg')) {
                         const svg = `<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg"><rect width="512" height="512" fill="#1a1a1a"/><text x="50%" y="50%" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" dy=".3em">Image ${index + 1}</text></svg>`;
                         target.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
@@ -426,23 +432,23 @@ export default function Home() {
       {/* Full Image Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[500] bg-black/95 sm:bg-black/90 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-5xl w-full max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-5xl w-full max-h-[95vh] sm:max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-3 -right-3 sm:top-2 sm:right-2 z-10 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 text-white flex items-center justify-center shadow-lg transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-800/80 hover:bg-gray-700 text-white flex items-center justify-center shadow-lg transition-colors"
               aria-label="Close"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
             <img
               src={selectedImage}
               alt="Selected"
-              className="w-full h-auto max-h-[85vh] object-contain rounded-xl shadow-2xl"
+              className="w-full h-auto max-h-[90vh] sm:max-h-[85vh] object-contain rounded-lg sm:rounded-xl shadow-2xl"
             />
           </div>
         </div>
