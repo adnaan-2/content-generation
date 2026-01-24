@@ -242,7 +242,7 @@ export default function Home() {
       )}
 
       {/* Search Bar Section */}
-      <div className={`px-3 sm:px-4 md:px-6 lg:px-8 ${hasGeneratedContent ? 'pb-4 md:pb-6 pt-4' : 'pb-3 sm:pb-4'} flex items-center justify-center ${!hasGeneratedContent ? 'flex-1' : ''}`}>
+      <div className={`px-3 sm:px-4 md:px-6 lg:px-8 ${hasGeneratedContent ? 'pb-4 md:pb-6 pt-4' : 'py-2 sm:py-3'} flex items-center justify-center`}>
         <div className="max-w-3xl w-full mx-auto">
           <div className="relative flex items-center gap-1.5 sm:gap-2 bg-gray-800/40 border border-gray-700/60 rounded-xl sm:rounded-2xl px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-gray-800/60 hover:shadow-lg hover:shadow-white/10 focus-within:border-white/50 focus-within:ring-2 focus-within:ring-white/20 focus-within:shadow-xl focus-within:shadow-white/10">
             {/* Photo/Video Dropdown Button - Left Side */}
@@ -362,7 +362,7 @@ export default function Home() {
 
       {/* Static Images Gallery - Only show when no content generated */}
       {!hasGeneratedContent && (
-        <div className="relative h-[32vh] xs:h-[36vh] sm:h-[42vh] md:h-[48vh] lg:h-[54vh] xl:h-[58vh] mt-4 xs:mt-6 sm:mt-8 md:mt-10 pb-2 sm:pb-3 md:pb-4 flex items-end justify-center overflow-visible">
+        <div className="relative flex-1 min-h-[200px] mt-2 pb-4 flex items-end justify-center overflow-hidden">
           <div
             className="relative h-full w-full flex items-end justify-center"
             style={{ transformStyle: 'flat' }}
@@ -373,30 +373,27 @@ export default function Home() {
               const diff = index - centerIndex;
               const distanceFromCenter = Math.abs(diff);
 
-              // Base size with 5% step decrease away from center - responsive sizing
-              // Mobile: 12vw base, Tablet: 14vw, Desktop: 16vw
+              // Base size with 5% step decrease away from center
               const scalePercent = Math.max(70, 100 - 5 * distanceFromCenter);
               
-              // Responsive width: smaller on mobile, larger on desktop
-              const minWidth = 56 * scalePercent / 100; // Mobile minimum
-              const maxWidth = 260 * scalePercent / 100; // Desktop maximum
-              const vwWidth = 14 * scalePercent / 100; // Viewport width percentage
-              const widthSize = `clamp(${minWidth}px, ${vwWidth}vw, ${maxWidth}px)`;
+              // Much larger sizes for mobile visibility
+              // Mobile: starts at 80px width, Desktop: up to 220px
+              const baseWidth = 80; // Base width in pixels for mobile
+              const scaledWidth = baseWidth * scalePercent / 100;
+              const widthSize = `max(${scaledWidth}px, min(${16 * scalePercent / 100}vw, ${220 * scalePercent / 100}px))`;
               
-              // Height with 1.25 aspect ratio
-              const minHeight = 70 * scalePercent / 100;
-              const maxHeight = 320 * scalePercent / 100;
-              const vwHeight = vwWidth * 1.25;
-              const heightSize = `clamp(${minHeight}px, ${vwHeight}vw, ${maxHeight}px)`;
+              // Height with 1.3 aspect ratio (taller images)
+              const scaledHeight = scaledWidth * 1.3;
+              const heightSize = `max(${scaledHeight}px, min(${20.8 * scalePercent / 100}vw, ${286 * scalePercent / 100}px))`;
 
-              // Overlap horizontally - responsive offset (smaller on mobile)
-              const offset = `calc(${diff} * clamp(32px, 7vw, 130px))`;
+              // Overlap horizontally - tighter on mobile
+              const offset = `calc(${diff} * max(28px, min(8vw, 110px)))`;
               const zIndex = 100 - distanceFromCenter;
 
               return (
                 <div
                   key={index}
-                  className={"rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden absolute cursor-pointer transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-white/30 hover:ring-2 sm:hover:ring-4 hover:ring-white/60 hover:brightness-110"}
+                  className={"rounded-xl overflow-hidden absolute cursor-pointer transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-white/30 hover:ring-2 sm:hover:ring-4 hover:ring-white/60 hover:brightness-110"}
                   style={{
                     width: widthSize,
                     height: heightSize,
@@ -412,7 +409,7 @@ export default function Home() {
                   <img
                     src={img}
                     alt={`Sample ${index + 1}`}
-                    className="w-full h-full object-cover rounded-md sm:rounded-lg md:rounded-xl bg-gray-900"
+                    className="w-full h-full object-cover rounded-xl bg-gray-900"
                     loading="lazy"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
