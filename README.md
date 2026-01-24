@@ -12,25 +12,6 @@ A beautiful, responsive Next.js application that generates images and videos fro
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Run the development server:
-```bash
-npm run dev
-```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
-
 ## Usage
 
 1. Select whether you want to generate a **Photo** or **Video**
@@ -46,16 +27,7 @@ npm run dev
 - **Tailwind CSS** - Styling
 - **Hugging Face API** - Free AI image/video generation
 
-## Notes
+## Links
 
-- Image generation uses Hugging Face's Stable Diffusion models (free tier)
-- Video generation may have limited availability on free tiers
-- First generation may take longer as models load
-- No API keys required for basic usage
-
-## Build for Production
-
-```bash
-npm run build
-npm start
-```
+- Live link: https://content-generation-beige.vercel.app/
+- Docunment link: https://drive.google.com/file/d/1BgNGSCqoJ9xsAW4OKvO68YF07HhgePmE/view?usp=sharing
